@@ -27,7 +27,7 @@ import com.rubypaper.service.BoardService;
 @SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)//이 설정에 의해 서블릿 컨테이너가 모킹된다. mock 서블릿 컨테이너없이, port는 서블릿 컨테이너 구동
 @AutoConfigureMockMvc
 // @Controller, @RestControlloer가 설정된 클래스들을 찾아서 메모리에 생성함
-public class BoardControllerTest {
+public class BoardControllerTest2 {
 	@Autowired
 	private TestRestTemplate restT;
 	

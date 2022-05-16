@@ -11,7 +11,7 @@ import javax.persistence.TemporalType;
 @Entity//프레임워크에서 jpa를 사용한다면 @Entity툴을 자동으로 스캔하여 처리하기 때문에 엔티티클래스를 명시적으로 등록하지 않아도 된다 하지만 jpa를 단독으로 사용하는 경우 엔티티를 클래스들을 영옥성 유닛에 등록해야 한다.
 public class Board {
 	@Id
-	@GeneratedValue
+	@GeneratedValue//기본기 값 자동할당
 	private Long seq;
 
 	private String title;

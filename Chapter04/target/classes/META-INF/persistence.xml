@@ -19,10 +19,15 @@
 
 			<!-- 옵션 -->
 			<property name="hibernate.show_sql" value="true" /><!-- 하이버네이트가 생성한 SQL을 콘솔에 출력 -->
-			<property name="hibernate.format_sql" value="true" />
-			<property name="hibernate.use_sql_comments" value="false" />
-			<property name="hibernate.id.new_generator_mappings" value="true" />
-			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.format_sql" value="true" /><!-- 하이버네이트가 생성한 sql을 보기좋게 -->
+			<property name="hibernate.use_sql_comments" value="false" /><!-- sql에 포함된 주석도 같이 출력 -->
+			<property name="hibernate.id.new_generator_mappings" value="true" /><!-- 데이블에 저장되는 모든 데이터는 다른 데이터와 식별할 수 있는 유일키를 가지고 있어야 한다. 그런데 이 키 값을 자동으로 증가시키려면 이 속성을 true로 설정해야 함 -->
+			<property name="hibernate.hbm2ddl.auto" value="update" /><!-- 엔티티를 기준으로 테이블을 새롭게 생성할지, 또는 기존의 테이블을 재사용하는 방식으로 사용할지 결정 -->
+			<!-- 
+			create: 애플리케이션을 실행할 때, 기본 테이블을 삭제하고 엔티티에 설정된 매핑 정보를 참조하여 새로운 테이블을 생성한다(drop->create)
+			create-drop: 애플리케이션을 종료되기 직전에 새엉된 테이블을 삭제(drop->create->drop)
+			update: 기존에 사용중인 테이블이 있으면 테이블을 생성하지 않고 재사용, 없을때만 새롭게 생성, 만약 엔티티 클래스의 매핑 성정이 변경되면 변경된 내용만 반영(alter)
+			 -->
 		</properties>
 	</persistence-unit>
 

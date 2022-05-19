@@ -27,13 +27,23 @@ Persistence.createEntityManagerFactory("Chapter04");
 		
 		Board board = new Board();
 		
-		board.setTitle("제목7");
+		board.setTitle("제목11117");
 		board.setWriter("관리자");
 		board.setContent("글연습2");
 		board.setCreateDate(new Date());
-		board.setCnt(0L);
+		board.setCnt(1L);
 		
 		em.persist(board);
+		
+//Board board2 = new Board();
+//		
+//		board2.setTitle("제목1117");
+//		board2.setWriter("관리자");
+//		board2.setContent("글연습2");
+//		board2.setCreateDate(new Date());
+//		board2.setCnt(5L);
+//		
+//		em.persist(board2);
 		
 		tx.commit();
 		

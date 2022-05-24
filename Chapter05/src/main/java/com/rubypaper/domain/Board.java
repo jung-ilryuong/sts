@@ -29,14 +29,14 @@ public class Board {
 	private Date createDate;
 	private Long cnt;
 	
-//	@ManyToOne
-//	@JoinColumn(name="MEMBER_ID", nullable=false)
-//private Member member;
-//
-//	public void setMember(Member member) {
-//		this.member = member;
-//		member.getBoardList().add(this);
-//	}
+	@ManyToOne
+	@JoinColumn(name="MEMBER_ID", nullable=false)
+private Member member;
+
+	public void setMember(Member member) {
+		this.member = member;
+		member.getBoardList().add(this);
+	}
 
 
 

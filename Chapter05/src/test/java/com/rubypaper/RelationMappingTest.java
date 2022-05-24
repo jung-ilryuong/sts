@@ -1,6 +1,7 @@
 package com.rubypaper;
 
 import java.util.Date;
+import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,10 +23,10 @@ public class RelationMappingTest {
 	@Autowired
 	private MemberRepository memberRepo;
 
-	@Test
-	public void testCascadeDelete() {			
-		memberRepo.deleteById("member2");
-	}
+//	@Test
+//	public void testCascadeDelete() {			
+//		memberRepo.deleteById("member2");
+//	}
 
 	
 //	@Test
@@ -68,18 +69,18 @@ public class RelationMappingTest {
 //	}
 
 
-//	@Test
-//	public void testTwoWayMapping() {		
-//		Member member = memberRepo.findById("member1").get();
-//		
-//		System.out.println("===========================");
-//		System.out.println(member.getName() + "가(이) 저장한 게시글 목록");
-//		System.out.println("===========================");
-//		List<Board> list = member.getBoardList();
-//		for (Board board : list) {
-//			System.out.println(board.toString());
-//		}
-//	}
+	@Test
+	public void testTwoWayMapping() {		
+		Member member = memberRepo.findById("member1").get();
+		
+		System.out.println("===========================");
+		System.out.println(member.getName() + "가(이) 저장한 게시글 목록");
+		System.out.println("===========================");
+		List<Board> list = member.getBoardList();
+		for (Board board : list) {
+			System.out.println(board.toString());
+		}
+	}
 
 	
 //	@Test
